@@ -1,0 +1,132 @@
+.main-container{
+    width: 31rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+    margin-top: 6rem;
+    margin-bottom: 20rem;
+    /* box-shadow: 5px 5px 10px white; */
+  
+}
+.todoCompleted{
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: all 2s ease 3s;
+    text-transform: capitalize;
+    justify-content: space-between;
+    font-family: cursive;
+}
+.hide{
+    display: none;
+}
+.todo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: all 2s ease 3s;
+    text-transform: capitalize;
+    justify-content: space-between;
+    font-family: cursive;    
+}
+.todo-input{
+    width: 22rem;
+    height: 3rem;
+    border-radius: 5px;
+    color: black;
+    font-family: cursive;
+    font-size: 17px;
+    border: 1.6px solid black;
+}
+input::placeholder{
+    padding: 0.5rem;
+}
+.btn1{
+    width: 7rem;
+    height: 3rem;
+    cursor: pointer;
+    background: linear-gradient(to left,rgb(44, 179, 225),rgb(238, 4, 223));
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0.5rem;
+    font-size:1rem ;
+    font-family: cursive; 
+}
+.btn2{
+    width: 8.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    background-color: rgb(110, 26, 188);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size:1rem ;
+    font-family: cursive; 
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.todos{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    /* border: 2px solid black; */
+    background-color: #e4ecf3;
+    border-radius: 5px;
+    margin: 0.3rem;
+    height: 3rem;
+    align-items: center;
+}
+.todo-btns{
+    display: flex;
+    flex-direction: row;
+    position: inline;
+}
+.icons{
+    font-size: x-large;
+    margin: 0.5rem;
+    cursor: pointer;
+    color: rgb(120, 33, 201);
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+}
+.todo-text{
+    padding-left: 0.5rem;
+}
+.remain{
+    font-family: cursive; 
+    font-size: large;
+    text-align: left;
+    margin: 1rem 0rem 0px 0.4rem;
+}
+@media screen and (max-width: 500px) {
+    .main-container{
+        width: 19rem;   
+        margin-bottom: 20rem;  
+    }
+    .todos{
+        width: 20rem;
+    }
+    .todo-input{
+        width: 11rem;
+        height: 2.5rem;
+    }
+    .btn1{
+        width: 6rem;
+        height: 2.5rem;
+    }
+  }

@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  background: radial-gradient(circle,rgb(8, 182, 182),rgb(4, 4, 138));
+  min-height: 100vh;
+  height: auto;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

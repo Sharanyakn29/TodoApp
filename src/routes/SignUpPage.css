@@ -1,0 +1,26 @@
+.sub-heading{
+    text-align: left;
+    padding-left: 1.8rem;
+}
+@media screen and (width: 375px){
+    .sub-heading{
+        padding-left: 2rem;
+    }   
+}
+@media (min-width:412px)and (max-width: 429px){
+    .sub-heading{
+        padding-left: 2.8rem;
+    }   
+}
+@media (min-width:390px)and (max-width: 411px){
+    .sub-heading{
+        padding-left: 2.2rem;
+    }   
+}
+@media (min-width:430px)and (max-width: 500px){
+    .sub-heading{
+        padding-left: 3.2rem;
+    }   
+}
+
+
