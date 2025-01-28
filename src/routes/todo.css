@@ -5,11 +5,9 @@
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    font-family: cursive;
     margin-top: 6rem;
     margin-bottom: 20rem;
-    /* box-shadow: 5px 5px 10px white; */
-  
+    align-items: center;
 }
 .todoCompleted{
     text-decoration: line-through;
@@ -19,10 +17,13 @@
     transition: all 2s ease 3s;
     text-transform: capitalize;
     justify-content: space-between;
-    font-family: cursive;
 }
 .hide{
     display: none;
+}
+.todo-heading{
+    margin-bottom: 1rem;
+    font-size: xx-large;
 }
 .todo{
     display: flex;
@@ -31,34 +32,33 @@
     transition: all 2s ease 3s;
     text-transform: capitalize;
     justify-content: space-between;
-    font-family: cursive;    
 }
 .todo-input{
     width: 22rem;
     height: 3rem;
     border-radius: 5px;
     color: black;
-    font-family: cursive;
     font-size: 17px;
     border: 1.6px solid black;
 }
 input::placeholder{
     padding: 0.5rem;
+    font-family:'poppins';
 }
 .btn1{
     width: 7rem;
-    height: 3rem;
+    height: 53px;
     cursor: pointer;
     background: linear-gradient(to left,rgb(44, 179, 225),rgb(238, 4, 223));
     color: white;
     border-radius: 5px;
     border: 1px solid black;
-    margin: 0.5rem;
+    margin-left: 5px;
     font-size:1rem ;
-    font-family: cursive; 
+    font-family:'poppins';
 }
 .btn2{
-    width: 8.5rem;
+    width: 10.5rem;
     height: 2.5rem;
     cursor: pointer;
     background-color: rgb(110, 26, 188);
@@ -66,16 +66,14 @@ input::placeholder{
     border-radius: 5px;
     border: 1px solid black;
     font-size:1rem ;
-    font-family: cursive; 
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    font-family:'poppins';
 }
 .todos{
     list-style: none;
     display: flex;
-    justify-content: center;
     width: 30rem;
-    /* border: 2px solid black; */
     background-color: #e4ecf3;
     border-radius: 5px;
     margin: 0.3rem;
@@ -102,31 +100,58 @@ input::placeholder{
 }
 .btn-container{
     display: flex;
-    justify-content: space-between;
+    gap: 123px;
 }
 .todo-text{
     padding-left: 0.5rem;
 }
 .remain{
-    font-family: cursive; 
     font-size: large;
     text-align: left;
     margin: 1rem 0rem 0px 0.4rem;
 }
-@media screen and (max-width: 500px) {
+.add-update-icon{
+    display: none;
+}
+.input-container{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 360px) and (max-width: 500px) {
     .main-container{
-        width: 19rem;   
+        width: 20rem;   
         margin-bottom: 20rem;  
+        padding: 15px;
     }
     .todos{
         width: 20rem;
     }
     .todo-input{
-        width: 11rem;
+        width: 264px;
         height: 2.5rem;
+    }
+    .btn-container{
+        gap: 0px;
     }
     .btn1{
         width: 6rem;
         height: 2.5rem;
+        display: none;
+    }    
+    .btn2{
+        width: 9.5rem;
+    }
+    .add-update-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1.6px solid rgb(120, 33, 201);
+        border-radius: 5px;
+        width: 2.7rem;
+        margin-left: 2px;
+        font-size: 25px;
+        background: rgb(120, 33, 201);
+        color: white;
     }
   }

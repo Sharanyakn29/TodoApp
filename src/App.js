@@ -8,15 +8,15 @@ import ForgotPassword from './routes/ForgotPassword';
 
 function App() {
   return (
-    <div>
-    <Routes>
+    <>
+      <Routes>
           <Route path="/" element={<LoginPage/>}></Route>
           <Route path="/signuppage" element={<SignUpPage/>}></Route>
           <Route path="/addtodo" element={<AddTodo/>}></Route>
           <Route path="/forgotpassword" element={<ForgotPassword/>}></Route>
-    </Routes> 
-    </div>
-                     
+     </Routes>  
+    </>
+                      
        
   );
 }

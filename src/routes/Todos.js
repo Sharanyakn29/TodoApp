@@ -1,4 +1,6 @@
 import React,{useState,useRef,useEffect} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus,faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import './todo.css'
 
 function Todos() {
@@ -69,10 +71,9 @@ function Todos() {
     // }
 
   return (
-    <div>
-    
+    <div>    
       <input type='text' value={todoName} onChange={(e)=>setTodoName(e.target.value)} ref={inputRef} />
-      <button onClick={addOrUpdateTodo}> {editIndex !== null ? "Update Todo" : "Add Todo"} </button>
+      <button onClick={addOrUpdateTodo}> {editIndex !== null ? "Update Todo" : "Add Todo"} </button>      
       <button onClick={deleteAll}>Delete All</button>
       
         <ul>

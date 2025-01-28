@@ -1,13 +1,11 @@
 .container{
-    /* width: 40%; */
     width: 23rem;
     background-color: white;
     padding: 1.5rem;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
-    margin-bottom: 11rem;
+    margin: auto;
 }
 .heading{
     font-size: 2rem;
@@ -22,6 +20,7 @@
 }
 input::placeholder{
     color:black ;
+    font-family: 'poppins';
 }
 .btn{
     width: 13rem;
@@ -33,6 +32,7 @@ input::placeholder{
     border: 1px solid black;
     margin: 1rem;
     font-size:1rem ;
+    font-family: 'poppins';
 }
 span{
     text-decoration-thickness: 2px;
@@ -42,9 +42,8 @@ span{
 }
 @media screen and (max-width: 500px){
     .container{ 
-        margin-bottom: 21rem; 
-        width: 81%; 
-        margin-top: 10rem;
+        width: 315px; 
+        padding: 1rem;
     }
     .input{
         width: 16rem;

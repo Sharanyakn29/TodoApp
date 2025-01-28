@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './SignUpPage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
@@ -54,20 +53,20 @@ function SignUpPage() {
   return (
     <div className='App'>
       <div className='container' autoComplete='off'>
-      <div className='heading'>Sign In</div>
-        <div className='sub-heading'>Username</div>
+      <div className='heading'>Sign Up</div>
+        <div className='sub-heading' style={{textAlign:"left",paddingLeft:"35px"}}>Username</div>
         <div>
         <FontAwesomeIcon icon={faUser} />
         <input type="text" name="userId" value={formData.userId} onChange={handleChange} placeholder='User Id'
         className='input'></input>
         </div>
-        <div className='sub-heading'>Password</div>
+        <div className='sub-heading'style={{textAlign:"left",paddingLeft:"35px"}}>Password</div>
         <div>
         <FontAwesomeIcon icon={faLock} />
         <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder='Password'
         className='input'></input>
         </div>
-        <div className='sub-heading'>Confirm Password</div>
+        <div className='sub-heading'style={{textAlign:"left",paddingLeft:"35px"}}>Confirm Password</div>
         <div>      
         <FontAwesomeIcon icon={faLock} />
         <input type="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} 
@@ -78,11 +77,8 @@ function SignUpPage() {
         </div>
         <div>
         <p style={{whiteSpace:"pre-line"}}>{error}</p>  
-        </div>
-  
-      </div>         
-               
-           
+        </div>  
+      </div>        
     </div>
   )
 }

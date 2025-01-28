@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilePen } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faCheckToSlot} from '@fortawesome/free-solid-svg-icons'
+import { faPlus,faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 function AddTodo() {
 
     const[todos,setTodos] = useState([])
@@ -68,16 +69,9 @@ function AddTodo() {
     setHoverTodoId(null)
     }        
 
-    // const clearCompleted = () =>{
-    //         const total_todos=((previousTodo)=>
-    //         previousTodo.filter((todo,index)=> todo.completed!==true));
-    //         setTodos(total_todos)
-    // }
-
     const clearCompleted = () =>{
         setTodos((previousTodo) =>{
             const remainingTodos = previousTodo.filter((todo,index)=> todo.completed!==true);
-            console.log(remainingTodos)
             return remainingTodos
         })
     }
@@ -89,11 +83,12 @@ function AddTodo() {
   return (
     <div className='App'>
         <div className='main-container'>
-            <div className='heading'>Todo List</div> 
-            <div>
+            <div className='todo-heading'>Todo List</div> 
+            <div className='input-container'>
                 <input type='text' value={todoName} onChange={(e)=>setTodoName(e.target.value)} ref={inputRef} 
-                placeholder='Add your new todo' className='todo-input'/>
+                placeholder='Add your new todo' className='todo-input'/>                
                 <button onClick={addOrUpdateTodo} className='btn1'> {editIndex !== null ? "Update Todo" : "Add Todo"} </button>
+                <div onClick={addOrUpdateTodo} className='add-update-icon'>{editIndex !== null ? <FontAwesomeIcon icon={faPenToSquare} /> : <FontAwesomeIcon icon={faPlus} />}</div>
             </div>    
             <ul className='todo-container'>
                 {todos.map((todo,index)=>(
